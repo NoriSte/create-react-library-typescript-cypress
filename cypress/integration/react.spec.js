@@ -4,7 +4,7 @@ import React from 'react';
 import ExampleComponent from '../../src/index.tsx';
 describe('ExampleComponent component', () => {
   it('works', () => {
-    cy.mount(<ExampleComponent />, "Hello")
+    cy.mount(<ExampleComponent text="Hello world" />)
     // mount the component under test
     // start testing!
     cy.contains('Example Component')
