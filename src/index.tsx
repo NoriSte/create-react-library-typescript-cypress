@@ -2,9 +2,7 @@
  * @class ExampleComponent
  */
 
-import * as React from 'react'
-
-import styles from './styles.css'
+import * as React from 'react';
 
 export type Props = { text: string }
 
@@ -15,7 +13,7 @@ export default class ExampleComponent extends React.Component<Props> {
     } = this.props
 
     return (
-      <div className={styles.test}>
+      <div className="">
         Example Component: {text}
       </div>
     )

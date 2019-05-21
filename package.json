@@ -2,7 +2,7 @@
   "name": "create-react-library-typescript-cypress",
   "version": "1.0.0",
   "description": "",
-  "author": "NoriSte &lt;nori.ste.magni@gmail.com&gt;",
+  "author": "NoriSte",
   "license": "MIT",
   "repository": "NoriSte &lt;nori.ste.magni@gmail.com&gt;/create-react-library-typescript-cypress",
   "main": "dist/index.js",
@@ -19,7 +19,8 @@
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "cy:open": "cypress open"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -28,13 +29,18 @@
     "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "7.0.0",
+    "@babel/preset-react": "7.0.0",
+    "@cypress/webpack-preprocessor": "^4.0.3",
     "@svgr/rollup": "^2.4.1",
     "@types/jest": "^23.1.5",
     "@types/react": "^16.3.13",
     "@types/react-dom": "^16.0.5",
-    "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0",
+    "babel-core": "^7.0.0-beta.41",
+    "babel-runtime": "6.26.0",
     "cross-env": "^5.1.4",
+    "cypress": "^3.3.0",
+    "cypress-react-unit-test": "^2.4.1",
     "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -47,7 +53,9 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-typescript2": "^0.17.0",
     "rollup-plugin-url": "^1.4.0",
-    "typescript": "^2.8.3"
+    "ts-loader": "^6.0.1",
+    "typescript": "^2.8.3",
+    "webpack": "^4.32.0"
   },
   "files": [
     "dist"
