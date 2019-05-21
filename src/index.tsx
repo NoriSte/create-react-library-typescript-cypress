@@ -2,15 +2,16 @@
  * @class ExampleComponent
  */
 
+import axios from 'axios';
 import * as React from 'react';
 import styles from './styles.css';
-
 
 export type Props = { text: string }
 
 const ExampleComponent = (props:Props) => {
+  const [response, setResponse] = React.useState();
   React.useEffect(() => {
-    console.log("Hello");
+    axios.get('http://example.com/movies.json').then(resp => setResponse(resp.data));
   }, []);
 
   const {
@@ -20,6 +21,7 @@ const ExampleComponent = (props:Props) => {
   return (
     <div className={styles.test}>
       Example Component: {text}
+      {!!response && JSON.stringify(response)}
     </div>
   )
 }

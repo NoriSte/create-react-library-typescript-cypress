@@ -10,9 +10,13 @@ describe('ExampleComponent component', () => {
     fixReactDomScope(window);
   });
   it('works', () => {
+    cy.server();
+    cy.route('http://example.com/movies.json', 'fixture:movies.json').as("movies");
+
     cy.mount(<ExampleComponent text="Hello world" />)
     // mount the component under test
     // start testing!
     cy.contains('Example Component')
+    cy.wait("@movies");
   })
 })
