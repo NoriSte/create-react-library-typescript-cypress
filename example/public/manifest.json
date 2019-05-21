@@ -1,0 +1,8 @@
+{
+  "short_name": "create-react-library-typescript-cypress",
+  "name": "create-react-library-typescript-cypress",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
