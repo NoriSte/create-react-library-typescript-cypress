@@ -19,4 +19,14 @@ describe('ExampleComponent component', () => {
     cy.contains('Example Component')
     cy.wait("@movies");
   })
+  it('works again', () => {
+    cy.server();
+    cy.route('http://example.com/movies.json', 'fixture:movies.json').as("movies");
+
+    cy.mount(<ExampleComponent text="Hello world 2" />)
+    // mount the component under test
+    // start testing!
+    cy.contains('Hello world 2')
+    cy.wait("@movies");
+  })
 })

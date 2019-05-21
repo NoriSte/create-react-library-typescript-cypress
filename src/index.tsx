@@ -11,7 +11,11 @@ export type Props = { text: string }
 const ExampleComponent = (props:Props) => {
   const [response, setResponse] = React.useState();
   React.useEffect(() => {
-    axios.get('http://example.com/movies.json').then(resp => setResponse(resp.data));
+    const fetchData = async () => {
+      const resp = await axios.get('http://example.com/movies.json');
+      setResponse(resp.data)
+    };
+    fetchData();
   }, []);
 
   const {
