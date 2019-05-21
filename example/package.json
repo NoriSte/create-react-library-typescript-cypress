@@ -6,8 +6,8 @@
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "react-scripts": "^1.1.4",
     "create-react-library-typescript-cypress": "link:.."
   },
@@ -15,6 +15,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lib:copy": "mkdir -p node_modules/create-react-library-typescript-cypress && \\cp ../package.json node_modules/create-react-library-typescript-cypress/ && \\cp -R ../dist node_modules/create-react-library-typescript-cypress/"
   }
 }

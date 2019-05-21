@@ -16,5 +16,9 @@
 // Import commands.js using ES2015 syntax:
 import 'cypress-react-unit-test';
 
+Cypress.on('window:load', win => {
+	win.ReactDOM = window.ReactDOM || win.ReactDOM;
+});
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
